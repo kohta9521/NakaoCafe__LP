@@ -43,15 +43,6 @@
   background-color: #f6d51f;
 }
 
-/* 4枚目のスライド */
-.vertical-slider__slide:nth-child(4) {
-  background-color: #01b4bc;
-}
-
-/* 5枚目のスライド */
-.vertical-slider__slide:nth-child(5) {
-  background-color: #5fa55a;
-}
 
 /* SP時の文字サイズ調整 */
 @media (max-width: 599px) {
