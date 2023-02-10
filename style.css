@@ -95,7 +95,7 @@
 .slide2-menu-title {
     margin-left: 20px;
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
 }
 .slide2-menu-content {
@@ -112,6 +112,7 @@
 }
 .slide2-ul li {
     font-size: 20px;
+    line-height: 30px;
 }
 .slide2-attention {
     font-size: 20px;
@@ -122,14 +123,52 @@
     margin-top:10px;
     margin-left: 20px;
 }
-
+.slide3-left-img {
+    width: 70%;
+}
 /* 3枚目のスライド */
 .vertical-slider__slide:nth-child(3) {
     background-image: url(../assets/images/IMG_7663.jpeg);
     background-size:cover;
     background-position:50%;
 }
-
+.slide3-left {
+    width: 50%;
+    height: 100%;
+}
+.slide3-left-title {
+    font-size: 30px;
+    margin-bottom:20px;
+}
+.slide3-left-text {
+    font-size: 20px;
+    margin-bottom:50px;
+}
+.slide3-container {
+    display: flex;
+    justify-content: space-between;
+}
+.slide3-right {
+    width: 50%;
+    height: 100%;
+}
+.slide3-right-title {
+    font-size: 30px;
+    margin-bottom:20px;
+}
+.slide3-right-text {
+    font-size: 20px;
+    margin-bottom:50px;
+}
+.slide3-right-btn {
+    cursor: pointer;
+    display: block;
+    background-color: #fffafa;
+    border-radius: 10px;
+    margn: 10% auto;
+    width: 50%;
+    height: 15%;
+}
 
 /* SP時の文字サイズ調整 */
 @media (max-width: 599px) {
