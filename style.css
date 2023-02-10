@@ -1,5 +1,5 @@
-/* Google Fonts読み込み */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
 
 /* 簡易リセットCSS */
 * {
@@ -15,6 +15,13 @@
   height: calc(var(--vh, 1vh) * 100);
 }
 
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+}
+
 /* スライド */
 .vertical-slider__slide {
   height: 100%;
@@ -23,24 +30,104 @@
   justify-content: center;
   align-items: center;
   font-size: 10rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Zen Old Mincho', serif;
   font-weight: bold;
-  color: #fff;
+  color: white;
+  text-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
-
 /* 1枚目のスライド */
 .vertical-slider__slide:nth-child(1) {
-  background-color: #fa5457;
+  background-image: url(../assets/images/IMG_7692.jpeg);
+  background-size:cover;
+  background-position:50%;
 }
+
+
+
+
+
+
 
 /* 2枚目のスライド */
 .vertical-slider__slide:nth-child(2) {
-  background-color: #fa8925;
+    background-image: url(../assets/images/IMG_7672.jpeg);
+    background-size:cover;
+    background-position:50%;
+}
+.slide2-container {
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.01); 
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-right-color: rgba(255, 255, 255, 0.01);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(30px); 
+    backdrop-filter: blur(20px);
+}
+.slide2-title {
+    font-size:4rem;
+    text-align:center;
+}
+.slide2-content {
+    width: 90%;
+    height: 80%;
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-between;
+}
+.slide2-left {
+    width: 50%;
+    border-right: 1px solid black;
+}
+.slide2-text {
+    padding-top: 50px;
+    align-items: center;
+    font-size: 22px;
+    line-height: 50px;
+}
+.slide2-right {
+    width: 49%;
+    padding-right: 20px;
+}
+.slide2-menu-title {
+    margin-left: 20px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.slide2-menu-content {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 22px;
+}
+.slide2-ul {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+.slide2-ul li {
+    font-size: 20px;
+}
+.slide2-attention {
+    font-size: 20px;
+    margin-left: 20px;
+}
+.slide2-attention-text {
+    font-size: 17px;
+    margin-top:10px;
+    margin-left: 20px;
 }
 
 /* 3枚目のスライド */
 .vertical-slider__slide:nth-child(3) {
-  background-color: #f6d51f;
+    background-image: url(../assets/images/IMG_7663.jpeg);
+    background-size:cover;
+    background-position:50%;
 }
 
 
@@ -49,4 +136,155 @@
   .vertical-slider__slide {
     font-size: 16vw;
   }
+}
+
+
+
+
+@media screen and (max-width: 960px) {
+    /* 2枚目のスライド */
+    .slide2-container {
+        width: 95%;
+        height: 95%;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.01); 
+        border: 1px solid rgba(255, 255, 255, 0.01);
+        border-right-color: rgba(255, 255, 255, 0.01);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        -webkit-backdrop-filter: blur(30px); 
+        backdrop-filter: blur(20px);
+    }
+    .slide2-title {
+        font-size:1.2rem;
+        text-align:center;
+    }
+    .slide2-content {
+        width: 90%;
+        height: 80%;
+        margin: 5% auto;
+    }
+    .slide2-left {
+        width: 100%;
+        height: 30%;
+    }
+    .slide2-text {
+        padding-top: 50px;
+        font-size: 10px;
+    }
+    .slide2-right {
+        width: 100%;
+    }
+    .qrarea {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .qrarea img {
+        display: black;
+        width: 50%;
+        margin-left: 30%;
+    }
+    }
+    
+    /*520px以下で文字色青色になる*/
+    @media screen and (max-width: 520px) {
+    }
+
+
+
+
+
+
+
+
+
+
+/* 諸々の挙動設定 */
+
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	bottom:1%;
+	right:50%;
+    /*矢印の動き1秒かけて永遠にループ*/
+	animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+      0%{bottom:1%;}
+      50%{bottom:3%;}
+     100%{bottom:1%;}
+ }
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+    /*描画位置*/
+	position: absolute;
+	left:-20px;
+	bottom:10px;
+    /*テキストの形状*/
+	color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    /*矢印の形状*/
+    width: 3px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:0;
+	right:0;
+    /*矢印の形状*/
+	width:3px;
+	height: 50px;
+	background:#eee;
+}
+
+
+/* 棒グラフの描画 */
+.graf {
+	display: flex;
+	align-items: center;
+	margin: 2px;
+}
+
+.data-name {
+	padding: 0 30px;
+    font-size: 30px;
+	color: #404040;
+}
+
+.graf-bar-bg {
+	width: 100%;
+	background: #e0e0e0;
+}
+
+.graf-bar {
+	background: #32cd32;
+}
+
+.graf-bar span{
+	color: #FFF;
+	padding: 0 6px;
 }
